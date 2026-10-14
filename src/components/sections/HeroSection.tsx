@@ -74,6 +74,8 @@ export function HeroSection({ onAndroidClick, ready = false }: HeroSectionProps)
               key={item.id}
               src={item.image}
               alt=""
+              fetchPriority={index === 0 ? 'high' : 'low'}
+              decoding="async"
               className="absolute inset-0 h-full w-full object-cover"
               initial={index === 0 && !reduce ? { opacity: 0, scale: 1.12 } : false}
               animate={{
