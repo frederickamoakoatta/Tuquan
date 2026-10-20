@@ -24,23 +24,6 @@ const features = [
   },
 ];
 
-function ImagePlaceholder({ className = "", label }: { className?: string, label: string }) {
-  return (
-    <div
-      role="img"
-      aria-label={label}
-      className={`flex items-center justify-center bg-gradient-to-br from-emerald-100 via-teal-100 to-sky-100 ${className}`}
-    >
-      <div className="text-center text-emerald-800/60">
-        <Compass className="mx-auto mb-2 h-9 w-9" />
-        <span className="text-xs font-medium tracking-wide">
-          {label}
-        </span>
-      </div>
-    </div>
-  );
-}
-
 export function OurStorySection() {
   return (
     <section id="our-story" className="scroll-mt-24 relative overflow-hidden bg-[#fcfbf7] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
