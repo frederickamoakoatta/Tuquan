@@ -24,7 +24,7 @@ export const destinations: Destination[] = [
     country: 'Indonesia',
     title: 'Bali Beaches & Rice Terraces, Indonesia',
     days: '8 days',
-    budget: 'CAD 1,500–2,300',
+    budget: 'USD 1,500–2,300',
     tags: ['beaches', 'temples', 'tropical'],
     summary:
       'Bali is made for unhurried sunny days. Spend mornings among Ubud temples and rice terraces, then evenings on Canggu beaches, clubs, and sunset warungs by the water.',
@@ -43,7 +43,7 @@ export const destinations: Destination[] = [
     country: 'United Kingdom',
     title: 'London Palaces & West End, United Kingdom',
     days: '5 days',
-    budget: 'CAD 2,100–3,000',
+    budget: 'USD 2,100–3,000',
     tags: ['culture', 'history', 'nightlife'],
     summary:
       'London mixes royal history with neighborhood energy. Walk palaces and parks by day, then theatres, markets, and late pubs from Covent Garden to Shoreditch after dark.',
@@ -62,7 +62,7 @@ export const destinations: Destination[] = [
     country: 'United Arab Emirates',
     title: 'Dubai Marina & Desert Dunes, UAE',
     days: '6 days',
-    budget: 'CAD 2,400–3,400',
+    budget: 'USD 2,400–3,400',
     tags: ['luxury', 'desert', 'skyline'],
     summary:
       'Dubai is built for bold skyline contrast. Split days between Marina towers and the old souks, then add a desert evening and one quieter morning along the Palm.',

@@ -10,7 +10,7 @@ const trips = [
     region: 'Greece',
     title: 'Santorini',
     description: 'Whitewashed cliffs and caldera sunsets — a classic slow Aegean escape.',
-    price: 'CAD 5,200',
+    price: 'USD 5,200',
     image: '/images/destinations/feature-santorini.jpg',
   },
   {
@@ -18,7 +18,7 @@ const trips = [
     region: 'Japan',
     title: 'Kyoto',
     description: 'Matches a slow-travel style — temples, gardens, and quiet evening streets.',
-    price: 'CAD 6,800',
+    price: 'USD 6,800',
     image: '/images/destinations/feature-kyoto.jpg',
   },
   {
@@ -26,7 +26,7 @@ const trips = [
     region: 'South Africa',
     title: 'Cape Town',
     description: 'Mountains meet the ocean on the Cape, with days split between city and coast.',
-    price: 'CAD 7,400',
+    price: 'USD 7,400',
     image: '/images/destinations/feature-capetown.jpg',
   },
   {
@@ -34,7 +34,7 @@ const trips = [
     region: 'Indonesia',
     title: 'Bali',
     description: 'Seven balanced days of rice terraces, temples, and unhurried Ubud evenings.',
-    price: 'CAD 1,200',
+    price: 'USD 1,200',
     image: '/images/destinations/tequan-slider-04.jpg',
   },
   {
@@ -42,7 +42,7 @@ const trips = [
     region: 'Portugal',
     title: 'Lisbon',
     description: 'Belém at sunrise, pastéis in the afternoon, and a Sintra day-trip built in.',
-    price: 'CAD 800',
+    price: 'USD 800',
     image: '/images/destinations/feature-lisbon.jpg',
   },
   {
@@ -50,7 +50,7 @@ const trips = [
     region: 'Maldives',
     title: 'Maldives',
     description: 'A luxury-paced island stay — overwater stillness and long, quiet mornings.',
-    price: 'CAD 3,800',
+    price: 'USD 3,800',
     image: '/images/destinations/feature-maldives.jpg',
   },
 ]
@@ -162,7 +162,7 @@ export function DownloadCTASection({ onAndroidClick }: DownloadCTASectionProps) 
             <br />
             tailored trips
           </StaggerItem>
-          <StaggerItem as="p" className="mt-5 max-w-sm text-base leading-relaxed text-muted md:text-lg">
+          <StaggerItem as="p" className="mt-5 max-w-sm text-base leading-7 text-slate-600">
             Download Tuquan now and book itineraries suggested by AI — built around your pace,
             budget, and travel style.
           </StaggerItem>

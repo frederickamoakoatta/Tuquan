@@ -15,7 +15,7 @@ export function ContactSection() {
             Tell us where
             <br className="hidden sm:block" /> you want to go
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-muted md:text-lg">
+          <p className="mt-5 text-base leading-7 text-slate-600">
             Questions, press, or partnership ideas — send us a note. We read every message.
           </p>
         </Reveal>

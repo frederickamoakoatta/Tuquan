@@ -66,7 +66,7 @@ export function FaqsSection() {
                     </span>
                   </span>
                 </summary>
-                <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">{item.a}</p>
+                <p className="mt-3 text-base leading-7 text-slate-600">{item.a}</p>
               </details>
             </StaggerItem>
           ))}

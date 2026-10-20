@@ -55,7 +55,7 @@ function Pin({ title, text, side }: PinProps) {
       )}
       <div className="max-w-[16rem]">
         <p className="font-title text-sm font-bold text-ink">{title}</p>
-        <p className="mt-1 text-[13px] leading-snug text-muted">{text}</p>
+        <p className="mt-1 text-base leading-7 text-slate-600">{text}</p>
       </div>
       {side === 'left' && (
         <>
@@ -116,7 +116,7 @@ export function FeaturesSection({ onAndroidClick: _onAndroidClick }: FeaturesSec
       </div>
       <div className="relative mx-auto max-w-[92rem] px-6 py-16 sm:px-8 md:px-10 md:py-24 lg:px-14">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-500">
             Features
           </p>
           <h2 className="mt-3 font-title text-3xl font-bold leading-tight text-ink md:text-5xl">
@@ -165,7 +165,7 @@ export function FeaturesSection({ onAndroidClick: _onAndroidClick }: FeaturesSec
                 </span>
                 <div>
                   <p className="font-title text-sm font-bold text-ink">{pin.title}</p>
-                  <p className="mt-1 text-[13px] leading-snug text-muted">{pin.text}</p>
+                  <p className="mt-1 text-base leading-7 text-slate-600">{pin.text}</p>
                 </div>
               </StaggerItem>
             ))}

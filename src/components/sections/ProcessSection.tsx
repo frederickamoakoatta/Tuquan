@@ -101,7 +101,7 @@ export function ProcessSection() {
             From scroll to suitcase
             <br className="hidden sm:block" /> in minutes
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted md:text-lg">
+          <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-slate-600">
             Save a place, gather it into a list, and let Tuquan turn the wishlist into a real
             itinerary — without another weekend lost to tabs.
           </p>
@@ -151,7 +151,7 @@ export function ProcessSection() {
                     <h3 className="mt-2 font-title text-xl font-bold tracking-tight text-ink md:text-[1.35rem]">
                       {step.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-muted md:text-[15px]">
+                    <p className="mt-3 text-base leading-7 text-slate-600">
                       {step.description}
                     </p>
                     {step.featured && (

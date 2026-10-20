@@ -50,7 +50,7 @@ export function BottomCTASection({ onAndroidClick }: BottomCTASectionProps) {
           </div>
 
           <motion.div variants={fadeUp} className="flex flex-col items-start gap-6 lg:items-end">
-            <p className="max-w-md text-base leading-relaxed text-white/90 lg:text-right">
+            <p className="max-w-md text-base leading-7 text-white/90 lg:text-right">
               Ready to discover those hidden gems? Download Tuquan and turn them into a real
               itinerary today.
             </p>
