@@ -100,11 +100,7 @@ function FeaturesShowcase() {
   )
 }
 
-type FeaturesSectionProps = {
-  onAndroidClick?: () => void
-}
-
-export function FeaturesSection({ onAndroidClick: _onAndroidClick }: FeaturesSectionProps) {
+export function FeaturesSection() {
   return (
     <section id="features" className="relative scroll-mt-24 overflow-x-clip bg-[#ffffff]">
       <div className="pointer-events-none absolute inset-0" aria-hidden>

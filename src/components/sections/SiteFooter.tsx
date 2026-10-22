@@ -3,8 +3,8 @@ import { TequanMark } from '../ui/TequanMark'
 
 const links = [
   // { label: 'Support', href: '#' },
-  { label: 'Terms & Conditions', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
+  { label: 'Terms & Conditions', href: '/terms' },
+  { label: 'Privacy Policy', href: '/privacy' },
   // { label: 'DMCA', href: '#' },
 ]
 

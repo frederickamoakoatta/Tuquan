@@ -61,11 +61,7 @@ function visibleCount(width: number) {
   return 1
 }
 
-type DownloadCTASectionProps = {
-  onAndroidClick?: () => void
-}
-
-export function DownloadCTASection({ onAndroidClick }: DownloadCTASectionProps) {
+export function DownloadCTASection() {
   const viewportRef = useRef<HTMLDivElement>(null)
   const startX = useRef(0)
   const dragging = useRef(false)
@@ -170,7 +166,6 @@ export function DownloadCTASection({ onAndroidClick }: DownloadCTASectionProps) 
             <AppStoreButtons
               variant="badge"
               tone="light"
-              onAndroidClick={onAndroidClick}
               className="mt-8 justify-start"
             />
           </StaggerItem>

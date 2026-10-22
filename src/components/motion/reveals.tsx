@@ -33,11 +33,12 @@ export const staggerContainer: Variants = {
 }
 
 type RevealProps = {
-  children: ReactNode
+  children?: ReactNode
   className?: string
   variants?: Variants
   delay?: number
   as?: 'div' | 'section' | 'footer' | 'article' | 'p' | 'h2' | 'ul' | 'ol' | 'li'
+  ariaHidden?: boolean
 }
 
 export function Reveal({
@@ -46,18 +47,25 @@ export function Reveal({
   variants = fadeUp,
   delay = 0,
   as = 'div',
+  ariaHidden,
 }: RevealProps) {
   const reduce = useReducedMotion()
   const Comp = motion[as]
+  const hidden = ariaHidden ? true : undefined
 
   if (reduce) {
     const Tag = as
-    return <Tag className={className}>{children}</Tag>
+    return (
+      <Tag className={className} aria-hidden={hidden}>
+        {children}
+      </Tag>
+    )
   }
 
   return (
     <Comp
       className={className}
+      aria-hidden={hidden}
       variants={variants}
       initial="hidden"
       whileInView="show"

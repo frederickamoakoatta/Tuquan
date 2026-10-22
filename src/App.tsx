@@ -9,32 +9,39 @@ import { OurStorySection } from './components/sections/OurStorySection'
 import { ProcessSection } from './components/sections/ProcessSection'
 import { SiteFooter } from './components/sections/SiteFooter'
 import { SiteHeader } from './components/sections/SiteHeader'
-import { AndroidWaitlistModal } from './components/ui/AndroidWaitlistModal'
+import { PrivacyPolicyPage } from './components/pages/PrivacyPolicyPage'
+import { TermsPage } from './components/pages/TermsPage'
 import { PageLoader } from './components/ui/PageLoader'
 
 function App() {
   const [ready, setReady] = useState(false)
-  const [androidModalOpen, setAndroidModalOpen] = useState(false)
+  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+
+  if (path === '/privacy' || path === '/terms') {
+    return (
+      <div id="top">
+        <SiteHeader ready solid />
+        {path === '/privacy' ? <PrivacyPolicyPage /> : <TermsPage />}
+        <SiteFooter />
+      </div>
+    )
+  }
 
   return (
     <>
       {!ready && <PageLoader onDone={() => setReady(true)} />}
       <div id="top">
         <SiteHeader ready={ready} />
-        <HeroSection ready={ready} onAndroidClick={() => setAndroidModalOpen(true)} />
-        <FeaturesSection onAndroidClick={() => setAndroidModalOpen(true)} />
-        <DownloadCTASection onAndroidClick={() => setAndroidModalOpen(true)} />
+        <HeroSection ready={ready} />
+        <FeaturesSection />
+        <DownloadCTASection />
         <OurStorySection />
         <ProcessSection />
         <FaqsSection />
-        <BottomCTASection onAndroidClick={() => setAndroidModalOpen(true)} />
+        <BottomCTASection />
         <ContactSection />
         <SiteFooter />
       </div>
-      <AndroidWaitlistModal
-        open={androidModalOpen}
-        onClose={() => setAndroidModalOpen(false)}
-      />
     </>
   )
 }

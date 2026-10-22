@@ -3,17 +3,18 @@ import { motion, useReducedMotion } from 'motion/react'
 import { TequanMark } from '../ui/TequanMark'
 
 const items = [
-  { label: 'Features', href: '#features' },
-  { label: 'Our Story', href: '#our-story' },
-  { label: 'FAQs', href: '#faqs' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Features', href: '/#features' },
+  { label: 'Our Story', href: '/#our-story' },
+  { label: 'FAQs', href: '/#faqs' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 type SiteHeaderProps = {
   ready?: boolean
+  solid?: boolean
 }
 
-export function SiteHeader({ ready = false }: SiteHeaderProps) {
+export function SiteHeader({ ready = false, solid = false }: SiteHeaderProps) {
   const reduce = useReducedMotion()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -32,19 +33,22 @@ export function SiteHeader({ ready = false }: SiteHeaderProps) {
     }
   }, [open])
 
-  const overHero = !scrolled
+  const overHero = !solid && !scrolled
+  const bar = solid
+    ? 'border-b border-black/5 bg-white'
+    : scrolled
+      ? 'border-b border-black/5 bg-white shadow-sm'
+      : 'border-b border-transparent bg-transparent'
 
   return (
     <motion.header
-      className={`fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] transition-[background-color,box-shadow,border-color] duration-300 ${
-        scrolled ? 'border-b border-black/5 bg-white shadow-sm' : 'border-b border-transparent bg-transparent'
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] transition-[background-color,box-shadow,border-color] duration-300 ${bar}`}
       initial={reduce ? false : { opacity: 0, y: -18 }}
       animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: -18 }}
       transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="mx-auto flex max-w-[92rem] items-center justify-between px-6 py-4 sm:px-8 md:px-10 md:py-5 lg:px-14">
-        <a href="#top" className="inline-flex items-center gap-2.5" aria-label="Tuquan home">
+        <a href="/#top" className="inline-flex items-center gap-2.5" aria-label="Tuquan home">
           <TequanMark className="size-9 rounded-lg" />
           <span
             className={`font-title text-xl font-bold tracking-tight ${overHero ? 'text-white drop-shadow-md' : 'text-ink'}`}
@@ -107,7 +111,7 @@ export function SiteHeader({ ready = false }: SiteHeaderProps) {
         <nav
           id="mobile-nav"
           className={`px-6 py-3 sm:hidden ${
-            scrolled
+            solid || scrolled
               ? 'border-t border-black/5 bg-white'
               : 'border-t border-white/15 bg-white/12 backdrop-blur-md'
           }`}
@@ -118,7 +122,7 @@ export function SiteHeader({ ready = false }: SiteHeaderProps) {
               key={item.href}
               href={item.href}
               className={`block rounded-lg px-2 py-3 font-title text-base font-medium ${
-                scrolled ? 'text-ink hover:bg-black/5' : 'text-white hover:bg-white/10'
+                solid || scrolled ? 'text-ink hover:bg-black/5' : 'text-white hover:bg-white/10'
               }`}
               onClick={() => setOpen(false)}
             >

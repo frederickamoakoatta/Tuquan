@@ -1,6 +1,8 @@
+const APP_STORE_URL = 'https://apps.apple.com/us/app/tuquan/id6799024557'
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.tuquan.app'
+
 type AppStoreButtonsProps = {
   className?: string
-  onAndroidClick?: () => void
   compact?: boolean
   variant?: 'filled' | 'badge'
   tone?: 'dark' | 'light'
@@ -24,7 +26,6 @@ function PlayIcon({ className = 'size-5' }: { className?: string }) {
 
 export function AppStoreButtons({
   className = '',
-  onAndroidClick,
   compact = false,
   variant = 'filled',
   tone = 'dark',
@@ -36,7 +37,7 @@ export function AppStoreButtons({
         : 'inline-flex items-center gap-3 rounded-full border-[1.5px] border-white/70 bg-transparent px-5 py-2.5 text-white backdrop-blur-0 transition-[border-color,background-color,backdrop-filter,box-shadow] duration-200 hover:border-white hover:bg-white/15 hover:backdrop-blur-md hover:shadow-[0_8px_28px_rgb(255_255_255/0.16)]'
     return (
       <div className={`flex flex-row flex-wrap items-center justify-center gap-3 ${className}`}>
-        <a href="#" className={badge}>
+        <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className={badge}>
           <AppleIcon className="size-7" />
           <span className="text-left leading-none">
             <span className="block text-[10px] font-medium tracking-wide">Download on the</span>
@@ -45,7 +46,7 @@ export function AppStoreButtons({
             </span>
           </span>
         </a>
-        <button type="button" onClick={onAndroidClick} className={badge}>
+        <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className={badge}>
           <img
             src="/images/google-play.png"
             alt=""
@@ -57,7 +58,7 @@ export function AppStoreButtons({
               Google Play
             </span>
           </span>
-        </button>
+        </a>
       </div>
     )
   }
@@ -67,20 +68,23 @@ export function AppStoreButtons({
       className={`flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center ${className}`}
     >
       <a
-        href="#"
+        href={APP_STORE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`inline-flex items-center justify-center gap-2 rounded-full bg-primary font-title font-semibold text-white transition hover:bg-red-700 ${compact ? 'px-4 py-2.5 text-sm' : 'px-5 py-3 text-sm'}`}
       >
         <AppleIcon />
         Download iOS App
       </a>
-      <button
-        type="button"
-        onClick={onAndroidClick}
+      <a
+        href={PLAY_STORE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`inline-flex items-center justify-center gap-2 rounded-full bg-primary font-title font-semibold text-white transition hover:bg-red-700 ${compact ? 'px-4 py-2.5 text-sm' : 'px-5 py-3 text-sm'}`}
       >
         <PlayIcon />
-        Pre-Order Android
-      </button>
+        Download Android App
+      </a>
     </div>
   )
 }

@@ -12,11 +12,10 @@ const EASE = [0.22, 1, 0.36, 1] as const
 type Phase = 'idle' | 'slider' | 'type' | 'buttons' | 'phone' | 'live'
 
 type HeroSectionProps = {
-  onAndroidClick?: () => void
   ready?: boolean
 }
 
-export function HeroSection({ onAndroidClick, ready = false }: HeroSectionProps) {
+export function HeroSection({ ready = false }: HeroSectionProps) {
   const reduce = useReducedMotion()
   const [active, setActive] = useState(0)
   const [paused, setPaused] = useState(false)
@@ -113,7 +112,7 @@ export function HeroSection({ onAndroidClick, ready = false }: HeroSectionProps)
                 if (phase === 'buttons') setPhase('phone')
               }}
             >
-              <AppStoreButtons variant="badge" onAndroidClick={onAndroidClick} />
+              <AppStoreButtons variant="badge" />
             </motion.div>
           </div>
         </div>

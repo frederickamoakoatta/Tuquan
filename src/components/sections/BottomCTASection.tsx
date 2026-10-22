@@ -2,11 +2,7 @@ import { motion, useReducedMotion } from 'motion/react'
 import { AppStoreButtons } from '../ui/AppStoreButtons'
 import { fadeUp, staggerContainer, viewportOnce } from '../motion/reveals'
 
-type BottomCTASectionProps = {
-  onAndroidClick: () => void
-}
-
-export function BottomCTASection({ onAndroidClick }: BottomCTASectionProps) {
+export function BottomCTASection() {
   const reduce = useReducedMotion()
 
   return (
@@ -54,11 +50,7 @@ export function BottomCTASection({ onAndroidClick }: BottomCTASectionProps) {
               Ready to discover those hidden gems? Download Tuquan and turn them into a real
               itinerary today.
             </p>
-            <AppStoreButtons
-              variant="badge"
-              onAndroidClick={onAndroidClick}
-              className="lg:justify-end"
-            />
+            <AppStoreButtons variant="badge" className="lg:justify-end" />
           </motion.div>
         </motion.div>
       </motion.div>
