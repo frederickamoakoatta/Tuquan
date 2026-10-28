@@ -35,7 +35,7 @@ export const destinations: Destination[] = [
     airportDetail: '13 km from Kuta',
     travelTime: '16h 30m',
     travelFrom: 'from Toronto',
-    image: '/images/destinations/tequan-slider-04.jpg',
+    image: '/images/destinations/tequan-slider-04.webp',
   },
   {
     id: 'london',
@@ -54,7 +54,7 @@ export const destinations: Destination[] = [
     airportDetail: '23 km from the city center',
     travelTime: '7h 20m',
     travelFrom: 'from Toronto',
-    image: '/images/destinations/tequan-slider-02.jpg',
+    image: '/images/destinations/tequan-slider-02.webp',
   },
   {
     id: 'dubai',
@@ -73,6 +73,6 @@ export const destinations: Destination[] = [
     airportDetail: '5 km from Deira',
     travelTime: '12h 50m',
     travelFrom: 'from Toronto',
-    image: '/images/destinations/tequan-slider-03.jpg',
+    image: '/images/destinations/tequan-slider-03.webp',
   },
 ]
